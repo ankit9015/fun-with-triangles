@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(75, 109, 184);
+    --footer-color: rgb(207, 243, 253);
+    --white: rgb(248, 246, 236);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary-color);
+    width: 100vw;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    align-self: left;
+    color: var(--white);
+}
+
+nav {
+    text-align: right;
+    vertical-align: bottom;   
+}
+
+.nav-items {
+    padding: 1rem 0.5rem;
+    color: var(--white);
+    font-size: large;
+}
+
+/* Main */
+
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h1 {
+    padding-top: 1rem;
+}
+
+main > p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.question-container {
+    font-size: large;
+    margin: 1rem;
+}
+
+input {
+    margin: auto;
+    padding: 0.2rem;
+    outline: var(--primary-color);
+    outline-width: 4px;
+}
+
+label {
+    padding: 0.2rem;    
+}
+
+label p {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;  
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.7rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: large;
+}
+
+.formula-container p {
+    font-size: large;
+    padding: 0.2rem;
+}
+
+/* Output */
+
+#output-message {
+    padding: 0.5rem;
+    font-size: x-large;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    background-color: var(--footer-color);
+}
+
+footer p{
+    padding-top: 1rem;
+}
+
+a,
+img,
+li {
+  display: inline;
+  color: var(--primary-color);
+}
+
+img {
+    width: 40px;
+    padding: 1rem 0.5rem;
+  }
