@@ -119,20 +119,26 @@ footer {
     font-size: large;
     font-weight: bold;
     background-color: var(--footer-color);
+    color: var(--primary-color);
+    margin-top: 3rem;
 }
 
 footer p{
     padding-top: 1rem;
 }
 
+footer nav {
+    text-align: center;
+    padding: 0.5rem;
+}
+
 a,
-img,
-li {
-  display: inline;
-  color: var(--primary-color);
+img {
+  margin: auto;
 }
 
 img {
     width: 40px;
-    padding: 1rem 0.5rem;
+    height: 40px;
+    padding: 0.2rem;
   }
