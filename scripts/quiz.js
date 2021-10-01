@@ -15,21 +15,38 @@ const correctAnswers = [
     "45°"
 ];
 
+console.log(correctAnswers.length);
+
 function  calculateScore() {
     let score = 0;
     let index = 0;
+    const numAnswered = [];
     const formResults = new FormData(quizForm);
+    // console.log(formResults.values().size);
 
+    // if (formResults.values().size !== 10) {
+    //     console.log("lost");
+    //     outputMessage.innerText = "You must answer all the questions";
+    // } else {
     for (let value of formResults.values()) {
+
+        numAnswered.push(1);
+        console.log(value);
         if (value === correctAnswers[index]) {
             score = score + 1;
         }
         index = index +1;
     }
-    outputMessage.innerText = `Your score is ${score}`;
-    console.log("score", score);
-        
+
+    if (numAnswered.length != 10) {
+        console.log("lost");
+        outputMessage.innerText = "You must answer all the questions";
+    } else {
+        outputMessage.innerText = `Your score is ${score}`;
+    }
+    console.log("score", score);        
 }
+
 
 
 

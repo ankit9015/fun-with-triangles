@@ -16,9 +16,17 @@ function substract(perimeter, side) {
     return sub;
 };
 
+function checkSides (sidesList) {
+    for (let side of sidesList) {
+        if (Number(side.value) <= 0) {
+            return false;
+        }
+    }
+    return true;
+}
 
 
-function calculateArea() {
+function calculateArea(sides) {    
     const perimeter = findPerimeter(sides)
     let area = 0;
     let temp = 1
@@ -35,4 +43,12 @@ function calculateArea() {
 
 
 
-buttonCalculateArea.addEventListener("click", calculateArea);
+buttonCalculateArea.addEventListener("click", function() {
+    let sidesGood = checkSides(sides);
+    console.log(sidesGood);
+    if (sidesGood) {
+        calculateArea(sides);
+    } else {
+        outputMessage.innerText = "Sides can not be negative, zero, or empty";
+    }
+});

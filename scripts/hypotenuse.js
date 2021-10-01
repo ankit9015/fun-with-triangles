@@ -5,8 +5,12 @@ const outputMessage = document.querySelector("#output-message");
 
 
 function calculateHypotenuse () {
-    const hypotenuse = Number(base.value) + Number(height.value);
-    outputMessage.innerText = `The hypotenuse of this triangle is: ${hypotenuse}`;
+    if(Number(base.value)<=0 || Number(height.value) <= 0){
+        outputMessage.innerText = "Sides can not be negative, zero, or empty";
+    } else {
+        let hypotenuse = (Number(base.value)**2 + Number(height.value)**2)**0.5;
+    outputMessage.innerText = `The hypotenuse of this triangle is: ${hypotenuse.toFixed(2)}`;
+    }   
 }
 
 
